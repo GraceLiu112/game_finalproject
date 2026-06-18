@@ -2,8 +2,10 @@
 PFont funny;
 
 // animation
-PImage[] gif;
+PImage[] gif; 
 PImage Mole;
+PImage Mole1;
+PImage Rabbit1;;
 int numberOfFrames;
 
 // game
@@ -35,6 +37,8 @@ void setup() {
   
   funny = createFont("Animal Paw.ttf", 80);
   Mole = loadImage("Mole.png");
+  Mole1 = loadImage("frame_5_delay-0.25s.gif");
+  Rabbit1 = loadImage("frame_3_delay-1s.png");
 
   // animation
   numberOfFrames = 10;
@@ -48,8 +52,8 @@ void setup() {
 
   // game variables
   score = 0;
-  frameSpeed = 6;
-  spawnSpeed = 40;
+  frameSpeed = 20;
+  spawnSpeed = 100;
 
   int index = 0;
 
