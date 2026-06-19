@@ -1,4 +1,5 @@
 void gameover(){
+  music.play();
   fill(59, 37, 14);
   background(120, 190, 100);
   textSize(80);
@@ -17,7 +18,16 @@ void gameover(){
 
 
 void gameoverClicks(){
-  //if (mouseX > 220 && mouseX < 560 && mouseY > 540 && mouseY < 620) {
-  //  mode = INTRO;
-  //}    
+  if (mouseX > 220 && mouseX < 560 && mouseY > 540 && mouseY < 620) {
+    score = 0;
+    lives = 5;
+    setHoles();
+    frameSpeed = 20;
+    spawnSpeed = 100;
+    sliderY = 350;
+    music.pause();
+    music.rewind();
+    mode = INTRO;
+    
+  }    
 }

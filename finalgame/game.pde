@@ -1,4 +1,5 @@
 void game() {
+  music.play();
   if(lives <= 0){
     mode = GAMEOVER;
   }

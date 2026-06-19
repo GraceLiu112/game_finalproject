@@ -1,4 +1,5 @@
 void option(){
+  music.play();
   background(120, 190, 100);
   fill(59, 37, 14);
   textSize(80);
@@ -18,8 +19,8 @@ void option(){
   strokeWeight(3);
   fill(255);
   circle(580, sliderY, 50);
-  frameSpeed = int(map(sliderY, 230, 520, 10, 20));
-  spawnSpeed = int(map(sliderY, 230, 520, 60, 100));
+  frameSpeed = int(map(sliderY, 230, 520, 15, 25));
+  spawnSpeed = int(map(sliderY, 230, 520, 80, 120));
   
   //start button
   tactile(480, 580, 200, 100);

@@ -1,4 +1,6 @@
 void intro(){
+  music.play();
+  imageMode(CORNER);
   fill(59, 37, 14);
   background(120, 190, 100);
   textSize(80);

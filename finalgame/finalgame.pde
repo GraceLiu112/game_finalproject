@@ -1,3 +1,11 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+
 //font
 PFont funny;
 
@@ -10,6 +18,10 @@ PImage Rabbit1;
 PImage Rabbit;
 int numberOfFrames;
 int numberOfRabbitFrames;
+
+// sound variables
+Minim minim;
+AudioPlayer music, coin;
 
 //choose
 int theme;
@@ -48,6 +60,11 @@ void setup() {
   theme = MOLE;
   setHoles();
   
+  //minim
+  minim = new Minim(this);
+  music = minim.loadFile("MUSIC.mp3");
+  coin = minim.loadFile("SUCCESS.wav");
+  
   funny = createFont("Animal Paw.ttf", 80);
   Mole = loadImage("Mole.png");
   Rabbit = loadImage("rabbitcartoon.png");
@@ -76,8 +93,8 @@ void setup() {
   score = 0;
   lives = 5;
   highestScore = 0;
-  frameSpeed = 15;
-  spawnSpeed = 80;
+  frameSpeed = 20;
+  spawnSpeed = 100;
   sliderY = 350;
 
 

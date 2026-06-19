@@ -35,6 +35,8 @@ void mousePressed() {
         if (mouseX > holeX[i] - 80 && mouseX < holeX[i] + 80 &&
             mouseY > holeY[i] - 60 && mouseY < holeY[i] + 60) {
           score = score + 1;
+          coin.rewind();
+          coin.play();
           playing[i] = false;
           f[i] = 0;
         }
@@ -44,6 +46,8 @@ void mousePressed() {
         if (mouseX > holeX[i] - 80 && mouseX < holeX[i] + 80 &&
             mouseY > holeY[i] - 60 && mouseY < holeY[i] + 60) {
           score = score + 1;
+          coin.rewind();
+          coin.play();
           playing[i] = false;
           f[i] = 0;
         }
